@@ -1,6 +1,6 @@
 {
   "name": "feather-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper for feather-icons",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,12 @@
     "type": "git",
     "url": "https://github.com/shiftgeist/feather-helper.git"
   },
+  "keywords": [
+    "feather-icons",
+    "helper",
+    "svg",
+    "design"
+  ],
   "homepage": "https://github.com/shiftgeist/feather-helper#readme",
   "author": "Felix (shiftgeist) Hungenberg",
   "license": "MIT",
