@@ -6,7 +6,7 @@
 
 ## Highlights
 
-- lightweight (adding ~274.94 B to `feather-icons`)
+- lightweight (adding ~0.2kB to `feather-icons`)
 - adds types for autocompletion
 - simplifies usage
 
