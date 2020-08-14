@@ -1,0 +1,20 @@
+{
+  "name": "feather-helper",
+  "version": "1.0.0",
+  "description": "Helper for feather-icons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiftgeist/feather-helper.git"
+  },
+  "homepage": "https://github.com/shiftgeist/feather-helper#readme",
+  "author": "Felix (shiftgeist) Hungenberg",
+  "license": "MIT",
+  "dependencies": {
+    "@types/feather-icons": "^4.7.0",
+    "feather-icons": "^4.28.0"
+  }
+}
