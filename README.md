@@ -2,7 +2,7 @@
 
 > Helper for [`feather-icons`](https://github.com/feathericons/feather) to simplify the use.
 
-![npm version](https://img.shields.io/npm/v/feather-helper) ![npm license](https://img.shields.io/npm/l/feather-helper)
+ ![npm version](https://img.shields.io/npm/v/feather-helper) ![npm license](https://img.shields.io/npm/l/feather-helper) [![Maintainability](https://api.codeclimate.com/v1/badges/44399aa35283c6f73e22/maintainability)](https://codeclimate.com/github/shiftgeist/feather-helper/maintainability)
 
 ## Highlights
 
