@@ -1,6 +1,6 @@
 import { icons } from "feather-icons";
 
-export default (name, options = {}) => {
+const feather = (name, options = {}) => {
   const svgOptions = Object.assign(
     {
       class: "",
@@ -20,3 +20,9 @@ export default (name, options = {}) => {
     console.error(`Icon "${name}" was not found.`);
   }
 };
+
+if (window !== undefined) {
+  window.Feather = feather;
+}
+
+export default feather;
