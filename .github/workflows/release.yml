@@ -17,6 +17,8 @@ jobs:
           node-version: 14
       # - name: Install
       #   run: npm install
+      #   env:
+      #     CI: true
       - name: Publish
         run: sh scripts/publish.sh
         env:
@@ -25,5 +27,5 @@ jobs:
       - name: Create release notes
         run: sh scripts/publish.sh
         env:
-          REGISTRY_TOKEN: ${{ secrets.PKG_TOKEN }}
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REGISTRY_URL: npm.pkg.github.com
