@@ -1,6 +1,6 @@
 {
   "name": "feather-helper",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Helper for feather-icons",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   ],
   "homepage": "https://github.com/shiftgeist/feather-helper#readme",
   "author": "Felix Hungenberg",
-  "license": "MIT",
+  "license": " Apache-2.0",
   "devDependencies": {
     "@types/feather-icons": "^4.7.0",
     "feather-icons": "^4.28.0",
