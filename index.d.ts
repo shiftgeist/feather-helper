@@ -296,8 +296,8 @@ interface FeatherOptions extends FeatherAttributes {
   width?: number;
   height?: number;
   "stroke-width"?: number;
-  "stroke-linecap"?: string;
-  "stroke-linejoin"?: string;
+  "stroke-linecap"?: "butt" | "round" | "square";
+  "stroke-linejoin"?: "arcs" | "bevel" | "miter" | "miter-clip" | "round";
 }
 
 declare function FeatherHelper(
