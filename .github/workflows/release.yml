@@ -19,13 +19,13 @@ jobs:
       #   run: npm install
       #   env:
       #     CI: true
-      - name: Publish
+      - name: Publish to NPM
         run: sh scripts/publish.sh
         env:
           REGISTRY_TOKEN: ${{ secrets.NPM_TOKEN }}
           REGISTRY_URL: registry.npmjs.org
-      - name: Create release notes
-        run: sh scripts/publish.sh
-        env:
-          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REGISTRY_URL: npm.pkg.github.com
+      # - name: Publish to Github
+      #   run: sh scripts/publish.sh
+      #   env:
+      #     REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     REGISTRY_URL: npm.pkg.github.com
