@@ -4,6 +4,7 @@
   "description": "Helper for feather-icons",
   "main": "index.js",
   "scripts": {
+    "start": "parcel example/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,13 +15,20 @@
     "feather-icons",
     "helper",
     "svg",
-    "design"
+    "design",
+    "svelte",
+    "vue",
+    "react"
   ],
   "homepage": "https://github.com/shiftgeist/feather-helper#readme",
-  "author": "Felix (shiftgeist) Hungenberg",
+  "author": "Felix Hungenberg",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@types/feather-icons": "^4.7.0",
+    "feather-icons": "^4.28.0",
+    "parcel": "=1.12.3"
+  },
+  "peerDependencies": {
     "feather-icons": "^4.28.0"
   }
 }
