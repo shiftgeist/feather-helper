@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.3
+      - name: Use Node (latest)
+        uses: actions/setup-node@v2.1.5
+        with:
+          node_version: 14
+      # - name: Install
+      #   run: npm install
+      - name: Publish
+        run: sh scripts/publish.sh
+        env:
+          REGISTRY_TOKEN: ${{ secrets.NPM_TOKEN }}
+          REGISTRY_URL: registry.npmjs.org
+      - name: Create release notes
+        run: sh scripts/publish.sh
+        env:
+          REGISTRY_TOKEN: ${{ secrets.PKG_TOKEN }}
+          REGISTRY_URL: npm.pkg.github.com
