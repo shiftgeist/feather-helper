@@ -1,2 +1,4 @@
 .editorconfig
+example/
+scripts/
 test/
