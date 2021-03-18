@@ -15,10 +15,10 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: 14
-      # - name: Install
-      #   run: npm install
-      #   env:
-      #     CI: true
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
       - name: Publish to NPM
         run: sh scripts/publish.sh
         env:

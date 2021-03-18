@@ -1,6 +1,4 @@
-import { FeatherAttributes } from "feather-icons";
-
-declare module "feather-helper";
+import { icons, FeatherAttributes } from "feather-icons";
 
 type FeatherIcons =
   | "activity"
@@ -300,9 +298,25 @@ interface FeatherOptions extends FeatherAttributes {
   "stroke-linejoin"?: "arcs" | "bevel" | "miter" | "miter-clip" | "round";
 }
 
-declare function FeatherHelper(
-  name: FeatherIcons,
-  options?: FeatherOptions
-): string;
+const feather = (name: FeatherIcons, options: FeatherOptions = {}): string => {
+  const svgOptions = Object.assign(
+    {
+      class: "",
+      color: "currentColor",
+      width: 24,
+      height: 24,
+      "stroke-width": 2,
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+    },
+    options
+  );
 
-export = FeatherHelper;
+  try {
+    return icons[name].toSvg(svgOptions);
+  } catch (error) {
+    console.error(`Icon "${name}" was not found.`);
+  }
+};
+
+export default feather;

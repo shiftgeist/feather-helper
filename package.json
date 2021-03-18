@@ -1,17 +1,9 @@
 {
   "name": "feather-helper",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Helper for feather-icons",
-  "main": "index.js",
-  "scripts": {
-    "start": "parcel example/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shiftgeist/feather-helper.git"
-  },
   "keywords": [
+    "feather-helper",
     "feather-icons",
     "helper",
     "svg",
@@ -21,18 +13,47 @@
     "react"
   ],
   "homepage": "https://github.com/shiftgeist/feather-helper#readme",
-  "author": "Felix Hungenberg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiftgeist/feather-helper.git"
+  },
   "license": " Apache-2.0",
+  "author": "Felix Hungenberg",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": "./dist/feather-helper.js",
+      "import": "./dist/feather-helper.js",
+      "require": "./dist/feather-helper.cjs.js",
+      "umd": "./dist/feather-helper.umd.js"
+    },
+    "./": "./",
+    "./package.json": "./package.json"
+  },
+  "main": "dist/feather-helper.cjs.js",
+  "unpkg": "dist/feather-helper.js",
+  "module": "dist/feather-helper.js",
+  "source": "lib/feather-helper.ts",
+  "browser": "dist/feather-helper.umd.js",
+  "types": "dist/feather-helper.d.ts",
+  "files": [
+    "LICENSE",
+    "dist"
+  ],
+  "scripts": {
+    "start": "klap start --example public/index.ts",
+    "build": "klap build",
+    "prepublishOnly": "npm run build",
+    "watch": "klap watch"
+  },
   "devDependencies": {
     "@types/feather-icons": "^4.7.0",
     "feather-icons": "^4.28.0",
-    "parcel": "=1.12.3"
+    "klap": "^6.1.3",
+    "typescript": "^4.2.3"
   },
   "peerDependencies": {
     "feather-icons": "^4.28.0"
-  },
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ]
+  }
 }
